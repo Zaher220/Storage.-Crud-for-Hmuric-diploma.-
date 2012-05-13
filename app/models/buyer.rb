@@ -1,4 +1,4 @@
 class Buyer < ActiveRecord::Base
   has_many :buys
-  has_one :buyer_type
+  belongs_to :buyer_type
 end

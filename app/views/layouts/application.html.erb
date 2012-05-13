@@ -7,7 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="nav-collapse">
+          <%=  render_navigation %>
+        </div>
+      </div>
+    </div>
+  </div>  
 <%= yield %>
 
 </body>

@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20120513020157) do
   end
 
   create_table "buyer_types", :force => true do |t|
-    t.string   "type"
+    t.string   "buyer_type"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(:version => 20120513020157) do
   end
 
   create_table "buys", :force => true do |t|
-    t.integer  "user_id"
     t.integer  "buyer_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -65,7 +64,6 @@ ActiveRecord::Schema.define(:version => 20120513020157) do
   end
 
   create_table "shipments", :force => true do |t|
-    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

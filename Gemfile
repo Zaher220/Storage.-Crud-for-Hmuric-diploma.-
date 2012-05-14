@@ -13,6 +13,7 @@ gem 'will_paginate'
 gem 'will_paginate_twitter_bootstrap'
 gem 'simple-navigation'
 gem 'russian'
+gem 'recordselect'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -2,3 +2,14 @@
 ru:
     Storages: "Склады"
     Buyers: "Покупатели"
+    active_scaffold:
+      created_at_label: "Дата создания"
+      ones_name_label: "Сокращение единицы измерения"
+      buyer_type_label: "Категории покупателей"
+      storage_name_label: "Название склада"
+      adress_label: "Адрес"
+      updated_at_label: "Дата последнего обновления информации"
+      sections_label: "Складские помещения"
+      company_name_label: "Название компании"
+      contact_face_label: "Ф.И.О. контактного лица"
+      tel_label: "Телефон"

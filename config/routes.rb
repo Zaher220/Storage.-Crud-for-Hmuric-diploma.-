@@ -1,10 +1,10 @@
 Skl::Application.routes.draw do
-  devise_for :users
-  namespace  :fuck do
-    resources :users do as_routes end
-    root :to => redirect('/fuck/users')
-  end
+ 
   
+  devise_for :users
+
+  resources :users do as_routes end
+
   resources :buyer_types do as_routes end
 
   resources :buyers do as_routes end

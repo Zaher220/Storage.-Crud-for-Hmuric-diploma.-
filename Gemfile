@@ -8,12 +8,14 @@ gem 'rails', '3.2.2'
 gem 'mysql2'
 gem 'devise'
 gem 'haml-rails'
+gem "file-column"
 gem 'active_scaffold'
 gem 'will_paginate'
 gem 'will_paginate_twitter_bootstrap'
 gem 'simple-navigation'
 gem 'russian'
 gem 'recordselect'
+gem "active_scaffold_export"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

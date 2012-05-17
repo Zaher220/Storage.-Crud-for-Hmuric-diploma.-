@@ -8,7 +8,8 @@ gem 'rails', '3.2.2'
 gem 'mysql2'
 gem 'devise'
 gem 'haml-rails'
-gem "file-column"
+gem 'paperclip'
+#gem "file-column"
 gem 'active_scaffold'
 gem 'will_paginate'
 gem 'will_paginate_twitter_bootstrap'

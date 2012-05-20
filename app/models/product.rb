@@ -8,4 +8,5 @@ class Product < ActiveRecord::Base
   belongs_to :unit
   has_many :buy_lists
   has_many :buys, :through => :buy_lists
+  acts_as_reportable
 end

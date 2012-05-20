@@ -21,7 +21,11 @@ Skl::Application.routes.draw do
 
   resources :shipping_errors do as_routes end
 
-  resources :shipments do as_routes end
+  resources :shipments do
+    member do get 'import'end
+    as_routes
+  end
+  
 
   resources :units do as_routes end
 

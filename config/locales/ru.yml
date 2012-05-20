@@ -1,5 +1,11 @@
 ## YAML Template.
 ru:
+    activerecord:
+      models:
+        buyer:
+          one: "Покупатель"
+          few: "Покупатели"
+          many: "Покупатели"
     Storages: "Склады"
     Buyers: "Покупатели"
     active_scaffold:
@@ -14,3 +20,19 @@ ru:
       contact_face_label: "Ф.И.О. контактного лица"
       tel_label: "Телефон"
       buy_list_label: "Список покупок"
+      section_name_label: "Складское помещение"
+      storage_label: "Склад"
+      shipping_errors_label: "Несоответствия и ошибки"
+      file_name_attach_label: "Excel файл"
+      product_name_label: "Наименование продукции"
+      opt_price_label: "Оптовая цена"
+      postupilo_label: "Размер поступления"
+      shtrih_code_label: "Штрих код"
+      single_price_label: "Розничная цена"
+      suppls_price_label: "Цена поставщиков"
+      section_label: "Складское помещение"
+      supplier_label: "Поставщик"
+      unit_label: "Единица измерения"
+      shipment_label: "Поставка"
+      buyer_label: "Покупатель"
+      buyer_type_label: "Тип покупателя"

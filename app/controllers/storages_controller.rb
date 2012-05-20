@@ -5,5 +5,6 @@ class StoragesController < ApplicationController
     conf.columns[:adress].label = :adress_label
     conf.columns[:updated_at].label = :updated_at_label
     conf.columns[:sections].label = :sections_label
+    conf.nested.add_link :sections
   end
 end 

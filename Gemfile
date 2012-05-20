@@ -10,6 +10,7 @@ gem 'devise'
 gem 'haml-rails'
 gem 'paperclip'
 #gem "file-column"
+#gem 'fastercsv'
 gem 'active_scaffold'
 gem 'will_paginate'
 gem 'will_paginate_twitter_bootstrap'
@@ -19,9 +20,9 @@ gem 'recordselect'
 gem "active_scaffold_export"
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'ruport'
-gem 'ruport-util'
-gem 'acts_as_reportable'
+#gem 'ruport'
+#gem 'ruport-util'
+#gem 'acts_as_reportable'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'

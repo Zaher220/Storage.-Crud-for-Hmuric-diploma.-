@@ -23,6 +23,7 @@ Skl::Application.routes.draw do
 
   resources :shipments do
     member do get 'report'end
+    member do get 'import'end
     as_routes
   end
   

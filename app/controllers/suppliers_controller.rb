@@ -1,5 +1,6 @@
 class SuppliersController < ApplicationController
   active_scaffold :supplier do |conf|
+    conf.actions.add :export
     conf.columns[:name].label = :company_name_label
     conf.columns[:adress].label = :adress_label
     conf.columns[:contact_face].label = :contact_face_label

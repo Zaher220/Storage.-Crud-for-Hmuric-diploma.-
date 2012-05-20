@@ -1,6 +1,6 @@
 Skl::Application.routes.draw do
  
-  
+  match "/public" => redirect("/public/system/shipments/reports/report.csv?")
   devise_for :users
 
   resources :users do as_routes end
@@ -22,7 +22,7 @@ Skl::Application.routes.draw do
   resources :shipping_errors do as_routes end
 
   resources :shipments do
-    member do get 'import'end
+    member do get 'report'end
     as_routes
   end
   

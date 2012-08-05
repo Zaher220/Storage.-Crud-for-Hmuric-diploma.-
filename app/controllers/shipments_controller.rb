@@ -1,5 +1,7 @@
-# -*- coding: utf-8 -*-
+#encoding: utf-8
+#Eto kontroller postavok
 class ShipmentsController < ApplicationController
+
   active_scaffold :shipment do |conf|
     conf.create.multipart = true
     conf.update.multipart = true
@@ -11,8 +13,11 @@ class ShipmentsController < ApplicationController
     conf.columns[:updated_at].label = :updated_at_label
     conf.columns[:shipping_errors].label = :shipping_errors_label
     conf.columns[:file_name_attach].label = :file_name_attach_label
+    conf.columns[:suppliers].label = :suppliers_label
+    conf.columns[:units].label = :units_label
   end
   require 'csv'
+  #Importiruem fail i vigrujaem bazu
   def import
     sh=Shipment.find(params[:id])
     id=params[:id]
@@ -40,9 +45,10 @@ class ShipmentsController < ApplicationController
 #      end
 #      flash.now[:message]="Allright"
     end
-     render :text=> 'Bliat'
+     render :text=> 'Импорт продуктов успешно выполнен'
   end
-
+require 'iconv'
+#Tut proishodit export
     def report
 
       sql='SELECT
@@ -66,12 +72,26 @@ class ShipmentsController < ApplicationController
           `storages`.`id` = `sections`.`storage_id` AND
           `shipments`.`id`='+params[:id]
       m=ActiveRecord::Base.connection.execute(sql)
-      CSV.open("public/system/shipments/reports/report.csv", "w") do |csv|
-        csv << ['Наименование продукта;На складе;Ед измерения;Поставщик;Секция на складе;Склад']
+      File.open("public/system/shipments/reports/report.csv", 'w:windows-1251') {|f|
+        f.write('Наименование продукта;На складе;Ед измерения;Поставщик;Секция на складе;Склад'+"\n")
         m.each do |object|
-          csv << [object[0].to_s+';'+object[1].to_s+';'+object[2].to_s+';'+object[3].to_s+';'+object[4].to_s+';'+object[5].to_s]
+          f.write(object[0].to_s+';'+object[1].to_s+';'+object[2].to_s+';'+object[3].to_s+';'+object[4].to_s+';'+object[5].to_s+"\n")
         end
-      end
-      render :text=> '<a href="/system/shipments/reports/report.csv?33">Нажмите что-бы скачать отчет</a>'
+        }
+#      CSV.open("public/system/shipments/reports/report.csv", "'w:windows-1251'") do |csv|
+#
+#        # csv << ['Наименование продукта;На складе;Ед измерения;Поставщик;Секция на складе;Склад']
+#        m.each do |object|
+#
+#
+#        # cp = Iconv.new("windows-1251", "utf-8")
+#
+#
+#          csv << [object[0].to_s+';'+object[1].to_s+';'+object[2].to_s+';'+object[3].to_s+';'+object[4].to_s+';'+object[5].to_s].force_encoding("utf-8").encode("utf-8")
+#          # csv << [object[0].to_s+';'+object[1].to_s+';'+object[2].to_s+';'+object[3].to_s+';'+object[4].to_s+';'+object[5].to_s]
+#        end
+#      end
+
+      render :text=> '<a href="/system/shipments/reports/report.csv?33">Нажмите что бы скачать отчет</a>'
     end
   end

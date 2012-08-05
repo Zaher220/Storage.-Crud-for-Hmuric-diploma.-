@@ -6,8 +6,43 @@ ru:
           one: "Покупатель"
           few: "Покупатели"
           many: "Покупатели"
-    Storages: "Склады"
-    Buyers: "Покупатели"
+        unit:
+          one: "Единица измерения"
+          few: "Единицы измерения"
+          many: "Единицы измерения"
+        buyer_type:
+          one: "Категория покупателей"
+          few: "Категории покупателей"
+          many: "Категории покупателей"
+        storage:
+          one: "Склад"
+          few: "Склады"
+          many: "Склады"
+        section:
+          one: "Складское помещение"
+          few: "Складские помещения"
+          many: "Складские помещения"
+        product:
+          one: "Продукт"
+          few: "Продукты"
+          many: "Продукты"
+        supplier:
+          one: "Поставщик"
+          few: "Поставщики"
+          many: "Поставщики"
+        shipment:
+          one: "Поставка"
+          few: "Поставки"
+          many: "Поставки"
+        buy:
+          one: "Покупка"
+          few: "Покупки"
+          many: "Покупки"
+        buy_list:
+          one: "Список покупок"
+          few: "Списки покупок"
+          many: "Списки покупок"
+
     active_scaffold:
       created_at_label: "Дата создания"
       ones_name_label: "Сокращение единицы измерения"
@@ -35,4 +70,10 @@ ru:
       unit_label: "Единица измерения"
       shipment_label: "Поставка"
       buyer_label: "Покупатель"
-      buyer_type_label: "Тип покупателя"
+      suppliers_label: "Поставщики"
+      units_label: "Единицы измерения"
+      amount_label: "Количество"
+      product_label: "Продукт"
+      get_opt_price_label: "Оптовая цена"
+      get_single_price_label: "Розничная цена"
+      get_suppls_price_label: "Цена поставщиков"

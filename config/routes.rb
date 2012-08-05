@@ -1,5 +1,5 @@
 Skl::Application.routes.draw do
- 
+ root :to => redirect('/buyers')
   match "/public" => redirect("/public/system/shipments/reports/report.csv?")
   devise_for :users
 

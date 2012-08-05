@@ -10,5 +10,6 @@ class BuysController < ApplicationController
     conf.columns[:updated_at].label = :updated_at_label
     conf.columns[:buyer].label = :buyer_label
     conf.list.mark_records = true
+      
   end
 end 
